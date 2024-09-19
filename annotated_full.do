@@ -10,7 +10,7 @@ clear
 cd "Compiled Files"
 
 // get global population size, density, mortality, and sex composition data
-import delimited "https://raw.githubusercontent.com/cjm972/econometrics/main/WPP2022_Demographic_Indicators_Medium.csv"
+import delimited "https://raw.githubusercontent.com/cjm972/public-transit-CoV/main/CSV%20Data/WPP2022_Demographic_Indicators_Medium.csv"
 
 keep if loctypename == "Country/Area"
 rename tpopulation1july pop_size
@@ -48,7 +48,7 @@ clear
 
 
 // get global population age bucket data
-import delimited "https://raw.githubusercontent.com/cjm972/econometrics/main/WPP2022_PopulationByAge5GroupSex_Percentage_Medium.csv"
+import delimited "https://raw.githubusercontent.com/cjm972/public-transit-CoV/main/CSV%20Data/WPP2022_PopulationByAge5GroupSex_Percentage_Medium.csv"
 
 keep if loctypename == "Country/Area"
 rename poptotal pop_share
@@ -96,7 +96,7 @@ clear
 
 
 // now load in GDP per capita 2021 data
-import delimited using "https://raw.githubusercontent.com/cjm972/econometrics/main/Results.csv"
+import delimited using "https://raw.githubusercontent.com/cjm972/public-transit-CoV/main/CSV%20Data/Results.csv"
 rename countryarea country
 rename gdppercapitagdpusdollars gdppercap
 
