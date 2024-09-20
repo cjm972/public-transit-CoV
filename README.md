@@ -9,7 +9,7 @@ Most data required for the analysis are directly sourced from the respective pub
 I was unable to directly link to online datasources for control data from the World Population Prospects survey (providing demographic information) nor from the National Accounts Main Aggregates Database (providing national GDP) (United Nations, 2022; United Nations Department of Economic and Social Affairs, 2022). Corresponding csv files were downloaded instead and placed inside the "CSV Data" folder. Given that this is a public repository, the execution code file directly links to the raw data in this repo, making it unneccessary to download this data on your own.
 
 ### Compiled Files and Result Files
-Compiled Files contains 2 .dta datasets that represent the data after processing and before performing any systematic analysis. Result Files contains tables, .dta files, and figures (in both .gph and .eps format) that result from running the .do file.
+"Compiled Files" contains 2 .dta datasets that represent the data after processing and before performing any systematic analysis. "Result Files" contains tables, .dta files, and figures (in both .gph and .eps format) that result from running the .do file. "Final Figures" contains the numbered figures used in the paper (in both .gph and .eps form).
 
 ### Code
 The annotated_full.do file contains the full analysis seen in the paper, from data processing to synthetic control. Please note our use of the synth package first published by Abadie, Diamond, & Hainmueller (2010). Further details regarding this package can be found at the following url: https://web.stanford.edu/~jhain/synthpage.html.
