@@ -12,7 +12,7 @@ StataFileTM:00001:01000:LiveGPH:                       :
 *! xsize: 7.5
 *! ysize: 4.5
 *! end
-<BeginItem> serset K60000202c580 
+<BeginItem> serset K6000027ca780 
 <BeginSerset>
 <BeginSeries>
 .name = `"treatment_effect1"'
@@ -410,11 +410,11 @@ sersetreadwrite    ’  þþþþþþþþþþþþþþþþþþþþþþþþþþþþþþþtreatment_effect1      
 <EndSersetData>
 <EndSerset>
 <EndItem>
-<BeginItem> scheme K6000022fb600 
+<BeginItem> scheme K60000271b0c0 
 .setscheme , scheme(stcolor) naturallywhite(1)
 <EndItem>
-<BeginItem> twowaygraph_g K6000022657c0 <UseScheme> K6000022fb600
-.sersets[1] = .__Map.K60000202c580.ref
+<BeginItem> twowaygraph_g K6000027c9980 <UseScheme> K60000271b0c0
+.sersets[1] = .__Map.K6000027ca780.ref
 .insert (plotregion1 = .plotregion.new , style(scheme twoway) graph(`.objkey')) at 1 1
 .plotregion1.xaxis_dexes = `"1"'
 .plotregion1.yaxis_dexes = `"1"'
@@ -588,3 +588,4 @@ tempname glsty
 .time = "18:59:24"
 .dta_file = "synthetic_results_full.dta"
 .dta_date = "19 Sep 2024 18:59"
+<EndItem>
