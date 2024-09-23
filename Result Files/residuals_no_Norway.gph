@@ -3,16 +3,16 @@ StataFileTM:00001:01000:LiveGPH:                       :
 *! classname: twowaygraph_g
 *! family: twoway
 *! command: twoway line treatment_effect1 week, lpattern(dash) lcolor(gray) legend(off) || line treatment_effect2 week, lpattern(dash) lcolor(gray) legend(off) || line treatment_effect3 week, lpattern(dash) lcolor(gray) legend(off) || line treatment_effect4 week, lpattern(dash) lcolor(gray) legend(off) || line treatment_effect5 week, lpattern(dash) lcolor(gray) legend(off) || line treatment_effect6 week, lpattern(dash) lcolor(gray) legend(off) || line treatment_effect7 week, lpattern(dash) lcolor(gray) legend(off) || line treatment_effect8 week, lpattern(dash) lcolor(gray) legend(off) || line treatment_effect9 week, lpattern(dash) lcolor(gray) legend(off) || line treatment_effect10 week, lpattern(dash) lcolor(gray) legend(off) || line treatment_effect11 week, lpattern(dash) lcolor(gray) legend(off) || line treatment_effect12 week, lpattern(dash) lcolor(gray) legend(off) || line treatment_effect13 week, lpattern(dash) lcolor(gray) legend(off) || line treatment_effect14 week, lpattern(dash) lcolor(gray) legend(off) || line treatment_effect15 week, lpattern(dash) lcolor(gray) legend(off) || line treatment_effect16 week, lpattern(dash) lcolor(gray) legend(off) || line treatment_effect17 week, lpattern(dash) lcolor(gray) legend(off) || line treatment_effect18 week, lpattern(dash) lcolor(gray) legend(off) || line treatment_effect19 week, lpattern(dash) lcolor(gray) legend(off) || line treatment_effect20 week, lpattern(dash) lcolor(gray) legend(off) || line treatment_effect21 week, lpattern(dash) lcolor(gray) legend(off) || line treatment_effect22 week, lpattern(dash) lcolor(gray) legend(off) || line treatment_effect23 week, lpattern(dash) lcolor(gray) legend(off) || line treatment_effect24 week, lpattern(dash) lcolor(gray) legend(off) || line treatment_effect25 week, lpattern(dash) lcolor(gray) legend(off) || line treatment_effect26 week, lpattern(dash) lcolor(gray) legend(off) || line treatment_effect27 week, lpattern(dash) lcolor(gray) legend(off) || line treatment_effect28 week, lpattern(dash) lcolor(gray) legend(off) || line treatment_effect29 week, lpattern(dash) lcolor(gray) legend(off) || line treatment_effect11 week, ytitle("Residuals of lagged COVID-19 Cases per Capita") xtitle("Calendar Week") xlabel(0(5)40) lpattern(solid) lcolor(black) lwidth(thick) xline(22, lstyle(foreground) lpattern(solid) lcolor(green)) xline(34, lstyle(foreground) lpattern(solid) lcolor(red)) yline(0, lstyle(foreground) lpattern(solid) lcolor(gs8))
-*! command_date: 20 Sep 2024
-*! command_time: 11:17:39
+*! command_date: 23 Sep 2024
+*! command_time: 22:33:12
 *! datafile: synth_results.dta
-*! datafile_date: 20 Sep 2024 11:06
+*! datafile_date: 23 Sep 2024 22:24
 *! scheme: stcolor
 *! naturallywhite: 1
 *! xsize: 7.5
 *! ysize: 4.5
 *! end
-<BeginItem> serset K600006cfce40 
+<BeginItem> serset K600003a6ff80 
 <BeginSerset>
 <BeginSeries>
 .name = `"treatment_effect1"'
@@ -398,11 +398,11 @@ W:                                            ‡A             
 <EndSersetData>
 <EndSerset>
 <EndItem>
-<BeginItem> scheme K600006159100 
+<BeginItem> scheme K600003800500 
 .setscheme , scheme(stcolor) naturallywhite(1)
 <EndItem>
-<BeginItem> twowaygraph_g K600006cd60c0 <UseScheme> K600006159100
-.sersets[1] = .__Map.K600006cfce40.ref
+<BeginItem> twowaygraph_g K600003a5db40 <UseScheme> K600003800500
+.sersets[1] = .__Map.K600003a6ff80.ref
 .insert (plotregion1 = .plotregion.new , style(scheme twoway) graph(`.objkey')) at 1 1
 .plotregion1.xaxis_dexes = `"1"'
 .plotregion1.yaxis_dexes = `"1"'
@@ -570,8 +570,8 @@ tempname glsty
 .insert (spacerl = .spacer.new) leftof plotregion1 , ring(11)
 .insert (spacerr = .spacer.new) rightof plotregion1 , ring(11)
 .command = `"twoway line treatment_effect1 week, lpattern(dash) lcolor(gray) legend(off) || line treatment_effect2 week, lpattern(dash) lcolor(gray) legend(off) || line treatment_effect3 week, lpattern(dash) lcolor(gray) legend(off) || line treatment_effect4 week, lpattern(dash) lcolor(gray) legend(off) || line treatment_effect5 week, lpattern(dash) lcolor(gray) legend(off) || line treatment_effect6 week, lpattern(dash) lcolor(gray) legend(off) || line treatment_effect7 week, lpattern(dash) lcolor(gray) legend(off) || line treatment_effect8 week, lpattern(dash) lcolor(gray) legend(off) || line treatment_effect9 week, lpattern(dash) lcolor(gray) legend(off) || line treatment_effect10 week, lpattern(dash) lcolor(gray) legend(off) || line treatment_effect11 week, lpattern(dash) lcolor(gray) legend(off) || line treatment_effect12 week, lpattern(dash) lcolor(gray) legend(off) || line treatment_effect13 week, lpattern(dash) lcolor(gray) legend(off) || line treatment_effect14 week, lpattern(dash) lcolor(gray) legend(off) || line treatment_effect15 week, lpattern(dash) lcolor(gray) legend(off) || line treatment_effect16 week, lpattern(dash) lcolor(gray) legend(off) || line treatment_effect17 week, lpattern(dash) lcolor(gray) legend(off) || line treatment_effect18 week, lpattern(dash) lcolor(gray) legend(off) || line treatment_effect19 week, lpattern(dash) lcolor(gray) legend(off) || line treatment_effect20 week, lpattern(dash) lcolor(gray) legend(off) || line treatment_effect21 week, lpattern(dash) lcolor(gray) legend(off) || line treatment_effect22 week, lpattern(dash) lcolor(gray) legend(off) || line treatment_effect23 week, lpattern(dash) lcolor(gray) legend(off) || line treatment_effect24 week, lpattern(dash) lcolor(gray) legend(off) || line treatment_effect25 week, lpattern(dash) lcolor(gray) legend(off) || line treatment_effect26 week, lpattern(dash) lcolor(gray) legend(off) || line treatment_effect27 week, lpattern(dash) lcolor(gray) legend(off) || line treatment_effect28 week, lpattern(dash) lcolor(gray) legend(off) || line treatment_effect29 week, lpattern(dash) lcolor(gray) legend(off) || line treatment_effect11 week, ytitle("Residuals of lagged COVID-19 Cases per Capita") xtitle("Calendar Week") xlabel(0(5)40) lpattern(solid) lcolor(black) lwidth(thick) xline(22, lstyle(foreground) lpattern(solid) lcolor(green)) xline(34, lstyle(foreground) lpattern(solid) lcolor(red)) yline(0, lstyle(foreground) lpattern(solid) lcolor(gs8))"'
-.date = "20 Sep 2024"
-.time = "11:17:39"
+.date = "23 Sep 2024"
+.time = "22:33:12"
 .dta_file = "synth_results.dta"
-.dta_date = "20 Sep 2024 11:06"
+.dta_date = "23 Sep 2024 22:24"
 <EndItem>

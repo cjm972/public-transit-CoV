@@ -725,6 +725,7 @@ clear
 foreach cntry in "Austria" "Belgium" "Bulgaria" "Croatia" "Cyprus" "Czechia" "Denmark" "Estonia" "Finland" "France" "Greece" "Hungary" "Iceland" "Ireland" "Italy" "Latvia" "Liechtenstein" "Lithuania" "Malta" "Netherlands" "Norway" "Poland" "Portugal" "Romania" "Slovakia" "Slovenia" "Spain" "Sweden" "Switzerland" "Mandates" "Neighbors" {
 	
 	
+	display "`cntry'"
 	use synth_results.dta
 	
 	// most of this analysis only leaves one country out but 2 special cases perform our analysis while dropping specific groups of countries		
@@ -736,6 +737,7 @@ foreach cntry in "Austria" "Belgium" "Bulgaria" "Croatia" "Cyprus" "Czechia" "De
 		drop if country == "Norway"
 		// define variable that tells us how many countries we have in the donor pool
 		local num_cntry = 26
+		display "Excluding Countries without Mask Mandates"
 	}
 	else if "`cntry'" == "Neighbors" {
 		// we perform one analysis dropping countries that neighbour Germany (in order to ensure that no SUTVA violations are occurring)
@@ -748,6 +750,7 @@ foreach cntry in "Austria" "Belgium" "Bulgaria" "Croatia" "Cyprus" "Czechia" "De
 		drop if country == "Poland"
 		// define variable that tells us how many countries we have in the donor pool
 		local num_cntry = 23
+		display "Excluding Countries without Neighbors"
 	}
 	else {
 		// we perform one analysis where we drop only one country at a time
@@ -827,6 +830,9 @@ foreach cntry in "Austria" "Belgium" "Bulgaria" "Croatia" "Cyprus" "Czechia" "De
 
 	// calculate predicted difference (residuals or treatment effect) between Covid-19 cases in synthetic and real Germany
 	replace treatment_effect = cases_synth_temp - cases_lagged if country_id == `germany_id'
+	
+	
+	
 	// if the country currently being left out belongs to the component countries for our first synthetic Germany, then we save the treatment effect in a variable named residuals which we can use to plot the synthetic Germanys created while leaving each of these countries out overlaid on the same plot
 	if "`cntry'" == "Austria" || "`cntry'" == "Finland" || "`cntry'" == "France" || "`cntry'" == "Italy" || "`cntry'" == "Malta" {
 		gen residual_no_`cntry' = cases_synth_temp - cases_lagged if country_id == `germany_id'
@@ -988,8 +994,8 @@ foreach cntry in "Austria" "Belgium" "Bulgaria" "Croatia" "Cyprus" "Czechia" "De
 	
 	
 	gen synth_cases_germany = cases_lagged11+treatment_effect`germany_id'
-	// plot real Germany vs synthetic Germany without 'cntry' NEW IDEA
-	twoway line synth_cases_germany week, lpattern(dash) lcolor(gray) || line cases_lagged`germany_id' week, ytitle("Lagged COVID-19 Cases per Capita") xtitle(		"Calendar Week") xlabel(0(5)40) legend(order(1 "Synthetic Germany" 2 "Germany") position(6) rows(1) region(lcolor(black))) lpattern(solid) lcolor(black) 		xline(22, lstyle(foreground) lpattern(solid) lcolor(green)) xline(34, lstyle(foreground) lpattern(solid) lcolor(red))
+	// plot real Germany vs synthetic Germany without 'cntry'
+	twoway line synth_cases_germany week, lpattern(dash) lcolor(gray) || line cases_lagged11 week, ytitle("Lagged COVID-19 Cases per Capita") xtitle(		"Calendar Week") xlabel(0(5)40) legend(order(1 "Synthetic Germany" 2 "Germany") position(6) rows(1) region(lcolor(black))) lpattern(solid) lcolor(black) 		xline(22, lstyle(foreground) lpattern(solid) lcolor(green)) xline(34, lstyle(foreground) lpattern(solid) lcolor(red))
 
 	graph save synthetic_germany_no_`cntry', replace
 	graph export synthetic_germany_no_`cntry'.eps, replace
