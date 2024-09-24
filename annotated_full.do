@@ -1217,8 +1217,8 @@ graph export mseratio_malta.eps, replace
 
 
 // plot real Malta vs synthetic Malta
-gen synth_cases_malta = cases_lagged`malta_id'+treatment_effect`malta_id'
-twoway line synth_cases_malta week, lpattern(dash) lcolor(gray) || line cases_lagged`malta_id' week, ytitle("Lagged COVID-19 Cases per Capita") xtitle("Calendar Week") xlabel(0(5)40) legend(order(1 "Synthetic Malta" 2 "Malta") position(6) rows(1) region(lcolor(black))) lpattern(solid) lcolor(black) xline(22, lstyle(foreground) lpattern(solid) lcolor(green)) xline(34, lstyle(foreground) lpattern(solid) lcolor(red))
+gen synth_cases_malta = cases_lagged21+treatment_effect19
+twoway line synth_cases_malta week, lpattern(dash) lcolor(gray) || line cases_lagged21 week, ytitle("Lagged COVID-19 Cases per Capita") xtitle("Calendar Week") xlabel(0(5)40) legend(order(1 "Synthetic Malta" 2 "Malta") position(6) rows(1) region(lcolor(black))) lpattern(solid) lcolor(black) xline(39, lstyle(foreground) lpattern(solid) lcolor(green))
 
 graph save synthetic_malta, replace
 graph export synthetic_malta.eps, replace

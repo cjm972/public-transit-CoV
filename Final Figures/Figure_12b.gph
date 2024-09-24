@@ -12,7 +12,7 @@ StataFileTM:00001:01000:LiveGPH:                       :
 *! xsize: 7.5
 *! ysize: 4.5
 *! end
-<BeginItem> serset K6000024f2240 
+<BeginItem> serset K6000033d5300 
 <BeginSerset>
 <BeginSeries>
 .name = `"treatment_effect1"'
@@ -398,11 +398,11 @@ D¹                                                           
 <EndSersetData>
 <EndSerset>
 <EndItem>
-<BeginItem> scheme K600002608c80 
+<BeginItem> scheme K6000033d6880 
 .setscheme , scheme(stcolor) naturallywhite(1)
 <EndItem>
-<BeginItem> twowaygraph_g K6000026c7400 <UseScheme> K600002608c80
-.sersets[1] = .__Map.K6000024f2240.ref
+<BeginItem> twowaygraph_g K600003200500 <UseScheme> K6000033d6880
+.sersets[1] = .__Map.K6000033d5300.ref
 .insert (plotregion1 = .plotregion.new , style(scheme twoway) graph(`.objkey')) at 1 1
 .plotregion1.xaxis_dexes = `"1"'
 .plotregion1.yaxis_dexes = `"1"'
@@ -587,4 +587,5 @@ tempname glsty
 .plotregion1.added_text[2].style.editstyle  angle(default) size( sztype(relative) val(3.4722) allow_pct(1)) color(black) horizontal(left) vertical(middle) margin( gleft( sztype(relative) val(0) allow_pct(1)) gright( sztype(relative) val(0) allow_pct(1)) gtop( sztype(relative) val(0) allow_pct(1)) gbottom( sztype(relative) val(0) allow_pct(1))) linegap( sztype(relative) val(0) allow_pct(1)) drawbox(no) boxmargin( gleft( sztype(relative) val(0) allow_pct(1)) gright( sztype(relative) val(0) allow_pct(1)) gtop( sztype(relative) val(0) allow_pct(1)) gbottom( sztype(relative) val(0) allow_pct(1))) fillcolor(bluishgray) linestyle( width( sztype(relative) val(.2) allow_pct(1)) color(black) pattern(solid) align(inside)) box_alignment(east) editcopy
 .plotregion1.added_text[1].DragBy .0000876554130892 -6.093675964217375
 .plotregion1.added_text[1].DragBy .0003798401233866 .859364559056306
+.plotregion1.added_text[1].Delete
 <EndItem>

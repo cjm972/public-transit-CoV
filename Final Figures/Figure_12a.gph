@@ -12,7 +12,7 @@ StataFileTM:00001:01000:LiveGPH:                       :
 *! xsize: 7.5
 *! ysize: 4.5
 *! end
-<BeginItem> serset K600006caefc0 
+<BeginItem> serset K6000032d5480 
 <BeginSerset>
 <BeginSeries>
 .name = `"treatment_effect1"'
@@ -410,11 +410,11 @@ sersetreadwrite    ’  þþþþþþþþþþþþþþþþþþþþþþþþþþþþþþþtreatment_effect1      
 <EndSersetData>
 <EndSerset>
 <EndItem>
-<BeginItem> scheme K600006ca5dc0 
+<BeginItem> scheme K6000032d7500 
 .setscheme , scheme(stcolor) naturallywhite(1)
 <EndItem>
-<BeginItem> twowaygraph_g K600006c366c0 <UseScheme> K600006ca5dc0
-.sersets[1] = .__Map.K600006caefc0.ref
+<BeginItem> twowaygraph_g K6000032f15c0 <UseScheme> K6000032d7500
+.sersets[1] = .__Map.K6000032d5480.ref
 .insert (plotregion1 = .plotregion.new , style(scheme twoway) graph(`.objkey')) at 1 1
 .plotregion1.xaxis_dexes = `"1"'
 .plotregion1.yaxis_dexes = `"1"'
@@ -598,4 +598,5 @@ tempname glsty
 .plotregion1.added_text[1].style.editstyle linestyle(align(outside)) editcopy
 .plotregion1.added_text[1].style.editstyle boxmargin(large) editcopy
 .plotregion1.added_text[1].DragBy -.0000836630417116 -3.828078490341686
+.plotregion1.added_text[1].Delete
 <EndItem>
